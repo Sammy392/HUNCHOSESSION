@@ -75,34 +75,40 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "Shadow-Xtech~" + string_session;
+                        let md = "POPKID;;;" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `> 𝐆ᴇᴛ 𝐑ɪɢʜᴛ 𝐖ɪᴛᴄʜ𝐀 🩷🎀 .
-╭───❍「 *𝐂ᴏɴɴᴇᴄᴛᴇ𝐃* 」
-┃ 🎀 𝐒ʜᴀᴅᴏᴡ 𝐗ᴛᴇᴄʜ 𝐁ᴏᴛ
-╰───────────❍
-╭───❍「 *𝐁ᴏᴛ 𝐑ᴇᴘᴏ* 」
-┃ [**Here**](https://github.com/Tappy-Black/Shadow-Xtech-V1)!
-╰───────────❍
-╭───❍「 *𝐉ᴏɪɴ 𝐂ʜᴀɴɴᴇ𝐋* 」
-┃ [**Here**](https://whatsapp.com/channel/0029VasHgfG4tRrwjAUyTs10) to join!
-╰───────────❍
-╭───❍「 *𝐁ᴏᴛ 𝐎ᴡɴᴇ𝐑* 」
-┃ +254759000340
-╰───────────❍
-╭───❍「 *𝐒ʏꜱᴛᴇᴍ 𝐒ᴛᴀᴛᴜꜱ* 」
-┃ ░░░░░░░░░░░░░░░░░░░ 100%
-╰───────────❍
-╭───❍「 *𝐀ᴜᴛᴏᴍᴀᴛɪᴏ𝐍* 」
-┃𝐏ᴏᴡᴇʀᴇᴅ 𝐁ʏ 𝐁ʟᴀᴄᴋ-𝐓ᴀᴘᴘʏ
-╰───────────❍`; 
+                        let desc = `╔═════🌙༻༺🌸═════╗
+     𝐆ᴇᴛ 𝐑ɪɢʜᴛ 𝐖ɪᴛ𝐜ʜ𝐀 🩷✨
+╚═════🌸༻༺🌙═════╝
+
+🌐 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗲𝗱 𝘁𝗼:
+» 🎀 𝙋𝙊𝙋𝙆𝙄𝘿 𝙂𝙇𝙀 
+
+📁 𝗕𝗼𝘁 𝗥𝗲𝗽𝗼:
+» 🔗 [𝗢𝗽𝗲𝗻 𝗛𝗲𝗿𝗲](https://github.com/devpopkid/POPKID-GLE)
+
+📣 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹:
+» 💬 [𝗧𝗮𝗽 𝘁𝗼 𝗝𝗼𝗶𝗻](https://whatsapp.com/channel/0029VbB6d0KKAwEdvcgqrH26)
+
+👑 𝗢𝘄𝗻𝗲𝗿:
+» ☎️ +254111385747
+
+⚙️ 𝗦𝘆𝘀𝘁𝗲𝗺 𝗦𝘁𝗮𝘁𝘂𝘀:
+» 🔮 𝟏𝟎𝟎% 𝗠𝗮𝗴𝗶𝗰𝗮𝗹𝗹𝘆 𝗔𝗰𝘁𝗶𝘃𝗲 🪄
+
+🤖 𝗔𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗼𝗻 𝗘𝗻𝗴𝗶𝗻𝗲:
+» 🌟 Powered by *𝐆𝐥𝐞 𝐌𝐨𝐭𝐢𝐯𝐞𝐬*
+
+╭─────✨─────╮
+💖 𝑺𝒑𝒓𝒆𝒂𝒅 𝒕𝒉𝒆 𝑮𝒍𝒊𝒕𝒄𝒉𝒀 𝑳𝒐𝒗𝒆 🌸
+╰─────✨─────╯`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "𝐒ʜᴀᴅᴏᴡ 𝐗ᴛᴇᴄʜ",
+title: "popkid gle",
 thumbnailUrl: "https://files.catbox.moe/og4tsk.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029VasHgfG4tRrwjAUyTs10",
+sourceUrl: "https://whatsapp.com/channel/0029VbB6d0KKAwEdvcgqrH26",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -111,14 +117,14 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*Don't Share with anyone this code use for deploy Shadow-Xtech*\n\n ◦ *Github:* https://github.com/Tappy-Black/Shadow-Xtech-V1`;
+                            let desc = `*Don't Share with anyone this code use for deploy Shadow-Xtech*\n\n ◦ *Github:* https://github.com/devpopkid/POPKID-GLE`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "Ⴊl𐌀Ꮳk𐌕𐌀ႲႲჄ",
+title: "popkid",
 thumbnailUrl: "https://files.catbox.moe/og4tsk.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029VasHgfG4tRrwjAUyTs10",
+sourceUrl: "https://whatsapp.com/channel/0029VbB6d0KKAwEdvcgqrH26",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
