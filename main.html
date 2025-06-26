@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SHADOW-XTECH</title>
+  <title>POPKID-GLE | Tech Panel</title>
   <link rel="shortcut icon" href="https://files.catbox.moe/your-favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -14,208 +14,192 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-image: url('https://files.catbox.moe/og4tsk.jpg');
-      background-size: cover;
-      background-position: center;
+      font-family: 'Orbitron', sans-serif;
       height: 100vh;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
       overflow: hidden;
+      color: #fff;
     }
 
-    body::before {
-      content: '';
-      position: absolute;
+    video#bgVideo {
+      position: fixed;
+      top: 0; left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0,0,0,0.7);
       backdrop-filter: blur(4px);
       z-index: -1;
     }
 
     .status-bar {
-      font-family: 'Orbitron', sans-serif;
-      letter-spacing: 1px;
-      font-weight: 700;
       position: fixed;
-      top: 15px;
-      background: rgba(0, 0, 0, 0.7);
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.5);
       padding: 8px 20px;
       border-radius: 20px;
+      font-size: 14px;
       display: flex;
       gap: 20px;
-      font-size: 14px;
-      box-shadow: 0 0 10px #000;
+      box-shadow: 0 0 15px #00f0ff;
+    }
+
+    .container {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 400px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,255,255,0.5);
     }
 
     h3 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 32px;
-      margin-bottom: 25px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .button-container {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      max-width: 300px;
-      width: 90%;
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #00f0ff;
+      text-shadow: 0 0 8px #00f0ff;
     }
 
     .button {
-      width: 100%;
-      padding: 12px;
-      font-weight: bold;
-      color: #fff;
-      background: linear-gradient(135deg, #2c3e50, #000000);
+      background: linear-gradient(135deg, #00f0ff, #0066ff);
       border: none;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      margin-top: 10px;
+      font-weight: bold;
       border-radius: 12px;
       cursor: pointer;
       position: relative;
-      overflow: hidden;
-      text-align: center;
-      text-decoration: none;
       transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0,255,255,0.5);
+      transform: scale(1.02);
     }
 
-    .button::before,
-    .button::after {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      border-radius: 12px;
-      background: linear-gradient(45deg, #0abde3, #4834d4, #000000, #eb4d4b);
-      background-size: 400%;
-      z-index: -1;
-      animation: steam 10s linear infinite;
-    }
-
-    .button::after {
-      filter: blur(30px);
-    }
-
-    .play-button {
-      background: linear-gradient(135deg, #0a3d62, #1e3a8a);
+    .copy-btn {
+      background-color: transparent;
+      border: 2px solid #00f0ff;
+      color: #00f0ff;
+      font-weight: bold;
       margin-top: 10px;
+    }
+
+    .copy-btn.copied {
+      background-color: #00f0ff;
+      color: #000;
+      border-color: #00f0ff;
     }
 
     .footer {
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: #111;
       text-align: center;
-      padding: 10px;
-      font-size: 14px;
-      color: #fff;
-    }
-
-    p {
-      margin: 5px 0;
-      font-weight: 500;
       font-size: 13px;
-      text-align: center;
-    }
-
-    @keyframes steam {
-      0% { background-position: 0 0; }
-      50% { background-position: 400% 0; }
-      100% { background-position: 0 0; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      color: #aaa;
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(5px);
     }
   </style>
 </head>
 <body>
-  <audio id="music" loop>
-    <source src="https://files.catbox.moe/l9319m.mp3" type="audio/mp3" />
-    Your browser does not support the audio element.
-  </audio>
+
+  <video id="bgVideo" autoplay muted loop>
+    <source src="https://files.catbox.moe/qkqmsd.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
 
   <div class="status-bar">
     <span id="batteryStatus">Battery: --%</span>
     <span id="currentTime">Time: --:--:--</span>
   </div>
 
-  <div class="button-container">
-    <h3>⚪ TAPPY ⚪</h3>
-    <a href="/pair" class="button" target="_blank">PAIRING-CODE</a>
-    <a href="/qr" class="button" target="_blank">QR-CODE</a>
-    <a href="https://wa.me/254759000340" class="button" target="_blank">OWNER</a>
-    <a href="https://whatsapp.com/channel/0029VasHgfG4tRrwjAUyTs10" class="button" target="_blank">WHATSAPP</a>
-    <p>HAVE ANY ERROR? CLICK BELOW</p>
-    <a href="https://wa.me/254759000340" class="button" target="_blank">ERROR</a>
-    <button id="playButton" class="button play-button">TAP TO PLAY</button>
+  <div class="container">
+    <h3>⚡ POPKID-GLE </h3>
+    <a href="/pair" class="button" target="_blank">PAIRING CODE</a>
+    <a href="/qr" class="button" target="_blank">QR LOGIN</a>
+    <a href="https://wa.me/254111385747" class="button" target="_blank">OWNER</a>
+    <a href="https://whatsapp.com/channel/0029VbB6d0KKAwEdvcgqrH26" class="button" target="_blank">WHATSAPP</a>
+    <button class="button copy-btn" id="copyBtn">COPY WHATSAPP LINK</button>
+    <audio id="music" loop>
+      <source src="https://files.catbox.moe/l9319m.mp3" type="audio/mp3">
+    </audio>
+    <button class="button" id="playMusic">TAP TO PLAY MUSIC</button>
   </div>
 
   <div class="footer">
-    Black-Tappy | Shadow-Xtech<span id="currentYear"></span>
+    © POPKID | GLE - <span id="year"></span>
   </div>
 
   <script>
-    const music = document.getElementById("music");
-    const playButton = document.getElementById("playButton");
     const batteryStatus = document.getElementById("batteryStatus");
     const currentTime = document.getElementById("currentTime");
-    const currentYearSpan = document.getElementById("currentYear");
+    const yearSpan = document.getElementById("year");
+    const copyBtn = document.getElementById("copyBtn");
+    const music = document.getElementById("music");
+    const playMusic = document.getElementById("playMusic");
 
-    if (playButton && music) {
-      playButton.addEventListener("click", () => {
-        music.play();
-      });
-    }
+    yearSpan.innerText = new Date().getFullYear();
 
-    if (currentYearSpan) {
-      currentYearSpan.innerText = new Date().getFullYear();
-    }
-
-    function updateTime() {
+    // Update Time
+    function updateClock() {
       const now = new Date();
-      const hours = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      currentTime.textContent = `Time: ${hours}:${minutes}:${seconds}`;
+      currentTime.textContent = `Time: ${now.toLocaleTimeString()}`;
     }
+    setInterval(updateClock, 1000);
+    updateClock();
 
-    setInterval(updateTime, 1000);
-    updateTime();
-
+    // Battery Status
     if ('getBattery' in navigator) {
       navigator.getBattery().then(battery => {
-        function updateBatteryInfo() {
-          const level = Math.round(battery.level * 100);
-          batteryStatus.textContent = `Battery: ${level}%`;
+        function updateBattery() {
+          batteryStatus.textContent = `Battery: ${Math.round(battery.level * 100)}%`;
         }
-        updateBatteryInfo();
-        battery.addEventListener('levelchange', updateBatteryInfo);
+        updateBattery();
+        battery.addEventListener('levelchange', updateBattery);
       }).catch(() => {
-        batteryStatus.textContent = "Battery: Not supported";
+        batteryStatus.textContent = "Battery: N/A";
       });
     } else {
-      batteryStatus.textContent = "Battery: Not supported";
+      batteryStatus.textContent = "Battery: Not Supported";
     }
+
+    // Copy Button
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText("https://wa.me/254111385747").then(() => {
+        copyBtn.textContent = "COPIED!";
+        copyBtn.classList.add("copied");
+        setTimeout(() => {
+          copyBtn.textContent = "COPY WHATSAPP LINK";
+          copyBtn.classList.remove("copied");
+        }, 1500);
+      });
+    });
+
+    // Play music
+    playMusic.addEventListener("click", () => {
+      music.play();
+    });
   </script>
+
 </body>
 </html>
