@@ -82,22 +82,22 @@ var randomItem = selectRandomItem(items);
 ╚═━━━🌟༻༺🌌━━━═╝  
 
 🛰️ *Connected To:*  
-» 🧿 𝐇𝐔𝐍𝐂𝐇𝐎 𝐆𝐋𝐄 𝐒𝐘𝐒
+» 🧿 𝐇𝐔𝐍𝐂𝐇𝐎 𝐒𝐘𝐒
 
 📂 *Bot Repository:*  
-» 🔗 [𝐕𝐢𝐞𝐰 𝐎𝐧 𝐆𝐢𝐭𝐇𝐮𝐛](https://github.com/devpopkid/POPKID-GLE)
+» 🔗 [𝐕𝐢𝐞𝐰 𝐎𝐧 𝐆𝐢𝐭𝐇𝐮𝐛](https://github.com/Sammy392/HUNCHO_SAMMY-MD)
 
 📡 *Join Broadcast Channel:*  
-» 💬 [𝐉𝐨𝐢𝐧 𝐍𝐨𝐰](https://whatsapp.com/channel/0029VbB6d0KKAwEdvcgqrH26)
+» 💬 [𝐉𝐨𝐢𝐧 𝐍𝐨𝐰](https://whatsapp.com/channel/0029Vb61XuIKgsNt6yv9Sc2y)
 
 👑 *Owner Contact:*  
-» 📞 +254111385747
+» 📞 254769569210
 
 🧰 *System Status:*  
 » 💠 𝟏𝟎𝟎% 𝐎𝐧𝐥𝐢𝐧𝐞 & 𝐅𝐥𝐨𝐰𝐢𝐧𝐠 𝐖𝐢𝐭𝐡 𝐄𝐧𝐞𝐫𝐠𝐲 ⚡
 
 🤖 *Automation Engine:*  
-» ✨ Powered By *𝐆𝐥𝐞 𝐌𝐨𝐭𝐢𝐯𝐞𝐬*
+» ✨ Powered By *huncho*
 
 ╭───🎇──────🎇───╮  
   🖤 𝙎𝙥𝙧𝙚𝙖𝙙 𝙏𝙝𝙚 𝙀𝙣𝙘𝙝𝙖𝙣𝙩𝙚𝙙 𝙑𝙞𝙗𝙚𝙨 🌌  
