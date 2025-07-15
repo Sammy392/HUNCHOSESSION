@@ -106,9 +106,9 @@ var randomItem = selectRandomItem(items);
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "popkid gle",
+title: "huncho-md",
 thumbnailUrl: "https://files.catbox.moe/og4tsk.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029VbB6d0KKAwEdvcgqrH26",
+sourceUrl: "https://whatsapp.com/channel/0029Vb61XuIKgsNt6yv9Sc2y",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
